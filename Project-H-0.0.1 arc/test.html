@@ -1,0 +1,220 @@
+<div class='builder__block d-flex' id='builder__block__play'>
+    <div class='builder__block__prefix d-flex'> 
+        <p class='builder__prefix' id='prefixBlock'></p> 
+        <input class='builder__prefix__input' id='builder__prefix__input' type='text'>
+    </div> 
+    <div class='builder__block__content'> 
+        <p class='builder__content__title'>[back] back video/music</p> 
+    </div> 
+    <div class='builder__block__help' id=''> 
+        <p class='builder__help d-flex justify-content-center' id='builder__toggle__play' onclick='showDescriptionBack()'>V</p> 
+    </div> 
+    <div class='builder__block__dart'> 
+        <p class='builder__dart d-flex justify-content-center' id='builder__dart' onclick='deleteCommandBack()'>&times;</p> 
+    </div> 
+</div> 
+<ul class='none hiddenInfo' id='descriptionPlay'> 
+    <p class='hiddenInfo__text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> 
+</ul>
+
+
+back.onclick = function showBack() {
+    if(allowBack == true) {
+        builder.insertAdjacentHTML('beforeEnd', "<div class='builder__block d-flex' id='builder__block__play'> <div class='builder__block__prefix'> <p class='builder__prefix'>!!</p> </div> <div class='builder__block__content'> <p class='builder__content'>[back] back video/music</p> </div> <div class='builder__block__help' id='trigger1'> <p class='builder__help d-flex justify-content-center' id='builder__toggle__play' onclick='showDescriptionBack()'>V</p> </div> <div class='builder__block__dart'> <p class='builder__dart d-flex justify-content-center' id='builder__dart__skip' onclick='deleteCommandBack()'>&times;</p> </div> </div> <ul class='none hiddenInfo' id='descriptionPlay'> <p class='hiddenInfo__text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> </ul>");
+
+        allowBack = false;
+    }
+}
+
+
+<section class="command flex-column" style="width: 24%;"> 
+    <h4 class="blocks__title">Блок-4</h4>
+    <div class="command__content flex-column">
+        <!--<div class="search-box flex-column">
+            <input class="search-txt" id="elastic" type="text">
+            <a class="search-btn" href="#"></a>
+        </div>-->
+        <ul class="elastic">
+            <li class="elastic__item" id="play">
+                <a class="elastic__item__title" href="#">[play] play video/music</a>
+                <p class="elastic__item__description">Позволяет боту воспроизводить музыку или видео</p>
+            </li>
+
+            <li class="elastic__item" id="skip">
+                <a class="elastic__item__title" href="#">[skip] skip video/music</a>
+                <p class="elastic__item__description">Позволяет боту скипать музыку или видео</p>
+            </li>
+
+            <li class="elastic__item" id="back">
+                <a class="elastic__item__title" href="#">[back] back video/music</a>
+                <p class="elastic__item__description">Позволяет боту скипать музыку или видео</p>
+            </li>
+
+            <li class="elastic__item" id="Тест">
+                <a class="elastic__item__title" href="#">[Тест] Тест Тест/Тест</a>
+                <p class="elastic__item__description">Тест боту Тест музыку или Тест!</p>
+            </li>
+            <li class="elastic__item" id="Тест">
+                <a class="elastic__item__title" href="#">[Тест] Тест Тест/Тест</a>
+                <p class="elastic__item__description">Тест боту Тест музыку или Тест!</p>
+            </li>
+            <li class="elastic__item" id="Тест">
+                <a class="elastic__item__title" href="#">[Тест] Тест Тест/Тест</a>
+                <p class="elastic__item__description">Тест боту Тест музыку или Тест!</p>
+            </li>
+            <li class="elastic__item" id="Тест">
+                <a class="elastic__item__title" href="#">[Тест] Тест Тест/Тест</a>
+                <p class="elastic__item__description">Тест боту Тест музыку или Тест!</p>
+            </li>
+            <li class="elastic__item" id="Тест">
+                <a class="elastic__item__title" href="#">[Тест] Тест Тест/Тест</a>
+                <p class="elastic__item__description">Тест боту Тест музыку или Тест!</p>
+            </li>
+            <li class="elastic__item" id="Тест">
+                <a class="elastic__item__title" href="#">[Тест] Тест Тест/Тест</a>
+                <p class="elastic__item__description">Тест боту Тест музыку или Тест!</p>
+            </li>
+            <li class="elastic__item" id="Тест">
+                <a class="elastic__item__title" href="#">[Тест] Тест Тест/Тест</a>
+                <p class="elastic__item__description">Тест боту Тест музыку или Тест!</p>
+            </li>
+
+            <li class="elastic__item"><a class="elastic__item__title href="#">aaaaa</a></li>
+
+            <li class="elastic__item"><a class="elastic__item__title href="#">ebeeebebe</a></li>
+        </ul>
+    </div>
+</section>
+
+
+
+<div class="container modal__content d-flex flex-column">
+    <div class="modal__title__block d-flex">
+        <h4 class="modal__title">Своздайте своего бота</h4>
+        <a class="modal__close" id="createModal__close" href="builder.html">&times;</a>
+    </div>
+    <div class="modal__text">
+        <p>Вы можете выбрать для какой платформы вы хотите создать бота</p>
+    </div>
+    <div class="modal__platforms">
+        <div class="platform__item d-flex justify-content-between" id="discordPlatform">
+            <div class="platform__item__content__block d-flex">
+                <img class="platform__item__img" src="img/platformItems/discord.png" alt="" width="50px" height="50px">
+                <p class="platform__item__text">Дискорд</p>
+            </div>
+            <div class="platform__item__dart__block">
+                <p class="platform__item__dart">&gt;</p>
+            </div>
+        </div>
+
+        <div class="platform__item d-flex justify-content-between" id="telegramPlatform">
+            <div class="platform__item__content__block d-flex">
+                <img class="platform__item__img" src="img/platformItems/telegram4.png" alt="" width="45px" height="45px">
+                <p class="platform__item__text">Телеграм</p>
+            </div>
+            <div class="platform__item__dart__block">
+                <p class="platform__item__dart">&gt;</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="container modal__content d-flex flex-column">
+    <div class="modal__title__block d-flex">
+        <h4 class="modal__title">Выберите шаблон</h4>
+        <a class="modal__close" id="createModal__close" href="builder.html">&times;</a>
+    </div>
+    <div class="modal__text">
+        <p>Вы можете облегчить создание бота и выбрать один из готовых шаблонов</p>
+    </div>
+    <div class="modal__platforms">
+        <div class="platform__item d-flex justify-content-between" id="userTemplate">
+            <div class="platform__item__content__block d-flex">
+                <img class="platform__item__img" src="img/platformItems/discord.png" alt="" width="50px" height="50px">
+                <p class="platform__item__text">Свой шаблон</p>
+            </div>
+            <div class="platform__item__dart__block">
+                <p class="platform__item__dart">&gt;</p>
+            </div>
+        </div>
+
+        <label class="platform__label" for="">Начните с шаблона</label>
+        <div class="platform__item d-flex justify-content-between" id="musicTemplate">
+            <div class="platform__item__content__block d-flex">
+                <img class="platform__item__img" src="img/platformItems/telegram4.png" alt="" width="45px" height="45px">
+                <p class="platform__item__text">Музыкальный бот</p>
+            </div>
+            <div class="platform__item__dart__block">
+                <p class="platform__item__dart">&gt;</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+    <div class="container settingModal__content d-flex flex-column">
+        <div class="modal__title__block d-flex">
+            <h4 class="modal__title">Персонализируйте свого бота</h4>
+            <a class="modal__close" id="modal__close" href="builder.html">&times;</a>
+        </div>
+        <div class="modal__text">
+            <p>Персонализируйте своего бота, выбрав му название, префикс и значок.<br> Их можно будет изменить в дальнейшем</p>
+        </div>
+        <div class="modal__settings d-flex flex-column justify-content-center">
+            <div class="settingIcon">
+                <input type="file" name="file-lg" id="file-lg" class="file-select"/>
+                <label for="file-lg" class="filename">
+                    Upload
+                </label>
+            </div>
+            <div class="settingPrefix d-flex flex-column">
+                <label class="" for="">Введите префикс:</label>
+                <input class="prefixBotInput" id="prefixBotInput" type="text" placeholder="!">
+            </div>
+            <div class="settingName d-flex flex-column">
+                <label class="" for="">Введите название бота:</label>
+                <input class="nameBotInput" id="nameBotInput" type="text" placeholder="Музыкальный бот">
+            </div>
+            <div class="settingModalNext">
+                <input class="settingModalNextInput" id="settingModalNextInput" type="submit" value="Продолжить" onclick="showPlatformModal()">
+            </div>
+            <div class="settingModalBack">
+                <a class="settingModalBackLink" id="" href="#" onclick="modalSettingBack()">Назад</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="addModal modal-5" id="addModal">
+        <div class="container addModal__content d-flex flex-column">
+            <div class="modal__title__block d-flex">
+                <h4 class="modal__title">Подтвердте</h4>
+                <a class="modal__close" id="add__modal__close" href="#">&times;</a>
+            </div>
+            <div class="modal__text" id="dd">
+                <p>Текст</p>
+            </div>
+            <div class="addModalInputBlock" id="addModalInputBlock">
+                <input class="addCommandBack" id="addCommandBack" type="submit" value="Добавить">
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="dropdown sideBar__dropdown">  
+        <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+          <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle me-2">
+          <strong class="login"><?=$login?></strong>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+          <li><a class="dropdown-item" href="#">New project...</a></li>
+          <li><a class="dropdown-item" href="#">Settings</a></li>
+          <li><a class="dropdown-item" href="#"><img src="img/platformItems/telegram4.png" width="80px" height="80px"></a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="#">Sign out</a></li>
+        </ul>
+    </div>
