@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>StartPage</title>
+</head>
+<body class="d-flex">
+
+    <section class="block-1 sideBar flex-column" style="width: 10%;">
+        <h4 class="blocks__title">Project-H</h4>
+        <div class="sideBar__content">
+            <div class="sideBar__item d-flex" style="background-color: #b8d20b;">
+                <img class="sideBar__item__image fix" width="20px" height="20px" src="img/icons/home.svg" alt="">
+                <a class="sideBar__item__link nav-link" href="#">Start Page</a>
+            </div>
+
+            <div class="sideBar__item d-flex">
+                <img class="sideBar__item__image" width="20px" height="20px" src="img/icons/dashboard.svg" alt="">
+                <a class="sideBar__item__link nav-link" href="builder.html">Builder</a>
+            </div>
+
+            <div class="sideBar__item d-flex">
+                <img class="sideBar__item__image" width="20px" height="20px" src="img/icons/orders.svg" alt="">
+                <a class="sideBar__item__link nav-link" href="#">Orders</a>
+            </div>
+
+            <div class="sideBar__item d-flex">
+                <img class="sideBar__item__image" width="20px" height="20px" src="img/icons/products.svg" alt="">
+                <a class="sideBar__item__link nav-link" href="#">Products</a>
+            </div>
+
+            <div class="sideBar__item d-flex">
+                <img class="sideBar__item__image" width="20px" height="20px" src="img/icons/friends.svg" alt="">
+                <a class="sideBar__item__link nav-link" href="#">Friends</a>
+            </div>
+
+            <div class="dropdown sideBar__dropdown">  
+                <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle me-2">
+                  <strong class="login"><?=$login?></strong>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+                  <li><a class="dropdown-item" href="#">New project...</a></li>
+                  <li><a class="dropdown-item" href="#">Settings</a></li>
+                  <li><a class="dropdown-item" href="#">Profile</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Sign out</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="block-2 infoBlock-1 flex-column" style="width: 66%;">
+        <h4 class="blocks__title">Блок-2</h4>
+        <div class="block-2__content flex-column">
+            <h4>Стартовая страница(название)</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+        </div>
+    </section>
+
+    <section class="block-3 infoBlock-2 flex-column" style="width: 24%;"> 
+        <h4 class="blocks__title">Блок-3</h4>
+        <div class="block-3__content flex-column">
+            <h4>Блок-3</h4>
+            <p>Тут будут находиться компоненты(блоки)(потом)</p>
+        </div>
+    </section>
+
+    <script src="js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

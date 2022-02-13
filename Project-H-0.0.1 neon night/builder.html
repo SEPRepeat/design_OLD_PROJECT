@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Builder</title>
+</head>
+<body class="d-flex">
+
+    <section class="block-1 sideBar flex-column" style="width: 10%;">
+        <h4 class="blocks__title">Project-H</h4>
+        <div class="sideBar__content">
+            <div class="sideBar__item d-flex">
+                <img class="sideBar__item__image fix" width="20px" height="20px" src="img/icons/home.svg" alt="">
+                <a class="sideBar__item__link nav-link" href="startPage.html">Start Page</a>
+            </div>
+
+            <div class="sideBar__item d-flex" style="background-color: #b8d20b;">
+                <img class="sideBar__item__image" width="20px" height="20px" src="img/icons/dashboard.svg" alt="">
+                <a class="sideBar__item__link nav-link" href="#">Builder</a>
+            </div>
+
+            <div class="sideBar__item d-flex">
+                <img class="sideBar__item__image" width="20px" height="20px" src="img/icons/orders.svg" alt="">
+                <a class="sideBar__item__link nav-link" href="#">Orders</a>
+            </div>
+
+            <div class="sideBar__item d-flex">
+                <img class="sideBar__item__image" width="20px" height="20px" src="img/icons/products.svg" alt="">
+                <a class="sideBar__item__link nav-link" href="#">Products</a>
+            </div>
+
+            <div class="sideBar__item d-flex">
+                <img class="sideBar__item__image" width="20px" height="20px" src="img/icons/friends.svg" alt="">
+                <a class="sideBar__item__link nav-link" href="#">Friends</a>
+            </div>
+
+            <div class="dropdown sideBar__dropdown">  
+                <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle me-2">
+                  <strong class="login"><?=$login?></strong>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+                  <li><a class="dropdown-item" href="#">New project...</a></li>
+                  <li><a class="dropdown-item" href="#">Settings</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Sign out</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="botIcons d-flex flex-column" style="width: 6%;">
+        <h4 class="blocks__title">Блок-2</h4>
+        <div class="botContent" id="botContent">
+
+            <div class="dropdown sideBar__dropdown">  
+                <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle me-2">
+                  <strong class="login"><?=$login?></strong>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+                  <li><a class="dropdown-item" href="#">New project...</a></li>
+                  <li><a class="dropdown-item" href="#">Settings</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Sign out</a></li>
+                </ul>
+            </div>
+            
+            <div class="botItem">
+                <input class="createInput" id="createInput" type="submit" value="+">
+            </div>
+        </div>
+    </section>
+
+    <!-- Модальное окно -->
+    <div class="createModal modal-1" id="createModal">
+        <div class="container modal__content d-flex flex-column">
+            <div class="modal__title__block d-flex">
+                <h4 class="modal__title">Своздайте своего бота</h4>
+                <a class="modal__close" id="create__modal__close" href="#">&times;</a>
+            </div>
+            <div class="modal__text">
+                <p>Вы можете выбрать для какой платформы вы хотите создать бота</p>
+            </div>
+            <div class="modal__platforms">
+                <div class="platform__item d-flex justify-content-between" id="discordBtn">
+                    <div class="platform__item__content__block d-flex">
+                        <img class="platform__item__img" src="img/platformItems/discord.png" alt="" width="50px" height="50px">
+                        <p class="platform__item__text">Дискорд</p>
+                    </div>
+                    <div class="platform__item__dart__block">
+                        <p class="platform__item__dart">&gt;</p>
+                    </div>
+                </div>
+
+                <div class="platform__item d-flex justify-content-between" id="telegramPlatform">
+                    <div class="platform__item__content__block d-flex">
+                        <img class="platform__item__img" src="img/platformItems/telegram4.png" alt="" width="45px" height="45px">
+                        <p class="platform__item__text">Телеграм</p>
+                    </div>
+                    <div class="platform__item__dart__block">
+                        <p class="platform__item__dart">&gt;</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="settingModal modal-2" id="settingModal">
+        <div class="container settingModal__content d-flex flex-column">
+            <div class="modal__title__block d-flex">
+                <h4 class="modal__title">Персонализируйте свого бота</h4>
+                <a class="modal__close" id="setting__modal__close" href="#">&times;</a>
+            </div>
+            <div class="modal__text">
+                <p>Персонализируйте своего бота, выбрав му название, префикс и значок.<br> Их можно будет изменить в дальнейшем</p>
+            </div>
+            <div class="modal__settings d-flex flex-column justify-content-center">
+                <div class="settingIcon d-flex justify-content-center" id="settingIcon">
+                    <div class="settingIconBlock" id="settingIconBlock">
+                        <label for="selectIcon" class="selectIconLabel">+</label>
+                        <input accept=".jpg,.jpeg,.png,.gif" type="file" class="selectIcon" id="selectIcon" name="selectIcon" multiple onchange="getImagePreview(event)">
+                    </div>
+                    <!-- Preview -->
+                    <img class="previewImage" id="previewImage" src="" alt="" onerror="this.style.display='none'">
+                </div>
+                <div class="settingOptions">
+                    <div class="settingPrefix d-flex flex-column">
+                        <label class="" for="">Введите префикс:</label>
+                        <input class="prefixBotInput" id="prefixBotInput" type="text" placeholder="!">
+                    </div>
+                    <div class="settingName d-flex flex-column">
+                        <label class="" for="">Введите название бота:</label>
+                        <input class="nameBotInput" id="nameBotInput" type="text" placeholder="Музыкальный бот">
+                    </div>
+                </div>
+                <div class="settingModalNext">
+                    <input class="settingContinueBtn" id="settingContinueBtn" type="submit" value="Продолжить">
+                </div>
+                <div class="settingModalBack">
+                    <a class="settingBackBtn" id="settingBackBtn" href="#">Назад</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="platformModal modal-3" id="platformModal">
+        <div class="container modal__content d-flex flex-column">
+            <div class="modal__title__block d-flex">
+                <h4 class="modal__title">Выберите шаблон</h4>
+                <a class="modal__close" id="platform__modal__close" href="#">&times;</a>
+            </div>
+            <div class="modal__text">
+                <p>Вы можете облегчить создание бота и выбрать один из готовых шаблонов</p>
+            </div>
+            <div class="modal__platforms">
+                <div class="platform__item d-flex justify-content-between" id="userTemplate">
+                    <div class="platform__item__block d-flex">
+                        <img class="platform__item__img" src="img/platformItems/discord.png" alt="" width="50px" height="50px">
+                        <p class="platform__item__text">Свой шаблон</p>
+                    </div>
+                    <div class="platform__item__dart__block">
+                        <p class="platform__item__dart">&gt;</p>
+                    </div>
+                </div>
+        
+                <label class="platform__label" for="">Начните с шаблона</label>
+                <div class="platform__item d-flex justify-content-between" id="template">
+                    <div class="platform__item__block d-flex" id="musicTemplate">
+                        <img class="platform__item__img" src="img/platformItems/telegram4.png" alt="" width="45px" height="45px">
+                        <p class="platform__item__text">Музыкальный бот</p>
+                    </div>
+                    <div class="platform__item__dart__block">
+                        <p class="platform__item__dart">&gt;</p>
+                    </div>
+                </div>
+                <div class="platformModalBack">
+                    <a class="platformBackBtn" id="platformBackBtn" href="#">Назад</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="confirmModal modal-4" id="confirmModal">
+        <div class="container confirmModal__content d-flex flex-column">
+            <div class="modal__title__block d-flex">
+                <h4 class="modal__title">confirm</h4>
+                <a class="modal__close" id="confirm__modal__close" href="#">&times;</a>
+            </div>
+            <div class="modal__text">
+                <p>Вы можете облегчить создание бота и выбрать один из готовых шаблонов</p>
+            </div>
+            <div class="confirmModalInputBlock">
+                <input class="confirmModalInput" id="confirmModalInput" type="submit" value="Создать">
+            </div>
+            <div class="confirmModalBack">
+                <a class="confirmBackBtn" id="confirmBackBtn" href="#">Назад</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="addModal modal-5" id="addModal">
+        <div class="container addModal__content d-flex flex-column">
+            <div class="modal__title__block d-flex">
+                <h4 class="modal__title">Подтвердить</h4>
+                <a class="modal__close" id="add__modal__close" href="#">&times;</a>
+            </div>
+            <div class="modal__text">
+                <p>Текст</p>
+            </div>
+            <div class="addModalMain d-flex">
+                <label class="commandLabel" for="">Введите название команды:</label>
+                <input class="commandNameInput" id="commandNameInput" type="text" autocomplete="off">
+            </div>
+            <div class="addModalInputBlock" id="addModalInputBlock">
+                <input class="addCommandInput" id="addCommandInput" type="submit" value="Добавить">
+            </div>
+
+        </div>
+    </div>
+    
+    <section class="builder flex-column" style="width: 60%;">
+        <div class="top__builder d-flex justify-content-between">
+            <div class="top__builder__title d-flex">
+                <div class="builder__name">
+                    <h4 class="blocks__title">Блок-3</h4>
+                </div>
+            </div>
+            <div class="tob__builder__control d-flex">
+                <div class="top__builder__btn" id="top__builder__btnBlock">
+                    <input class="startInput" id="startBotInput" type="submit" value="Запустить" onclick='changeStartInput()'>
+                </div>
+
+                <div class="">
+                    <input class="saveInput" id="saveInput" type="submit" value="Сохранить">
+                </div>
+            </div>
+        </div>
+        <div class="builder__content flex-column" id="builder">
+
+        </div>
+    </section>
+
+    <section class="command flex-column" style="width: 24%;"> 
+        <h4 class="blocks__title">Блок-4</h4>
+        <div class="command__content flex-column">
+            <!--<div class="search-box flex-column">
+                <input class="search-txt" id="elastic" type="text">
+                <a class="search-btn" href="#"></a>
+            </div>-->
+            <ul class="elastic" id="elastic">
+                
+            </ul>
+        </div>
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
+
